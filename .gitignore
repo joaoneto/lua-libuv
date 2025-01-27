@@ -1,0 +1,10 @@
+# Ignore compiled object files and temporary files
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
+*.log
+external/
