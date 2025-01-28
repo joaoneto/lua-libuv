@@ -2,10 +2,13 @@
 echo "Executing Lua script..."
 
 # Define the path to libuv.dll (or equivalent libuv.so for Linux/Mac)
-LIBUV_DIR="external/libuv/build/Release"
-export LD_LIBRARY_PATH=$LIBUV_DIR:$LD_LIBRARY_PATH
+LUA_DIR="./external/lua"
+LIBUV_DIR="./external/libuv/build"
 
-LuaExecutable="external/lua/lua"
+export LD_LIBRARY_PATH="$LUA_DIR:$LIBUV_DIR/lib:$LD_LIBRARY_PATH"
+export PATH="$PATH:$LUA_DIR:$LIBUV_DIR/lib"
+
+LuaExecutable="$LUA_DIR/lua"
 ScriptPath=$1
 
 $LuaExecutable $ScriptPath

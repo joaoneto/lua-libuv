@@ -23,25 +23,33 @@ Para configurar o ambiente, você precisará de algumas ferramentas de compilaç
 - **GCC**: Compilador de C.
 - **Make**: Utilitário para automação de compilação.
 - **Autotools**: Ferramentas necessárias para configurar e compilar a `libuv`.
+- **libreadline**: Dependência do Lua.
 
 ## Configuração Inicial
 
 Siga os passos abaixo para configurar o projeto e compilar as dependências:
 
-1. Clone o repositório:
+1. Instale as dependências (Unix-like):
+
+```bash
+# No ubuntu:
+sudo apt install libreadline-dev
+```
+
+2. Clone o repositório:
 
 ```bash
 git clone https://github.com/joaoneto/lua-libuv.git
 cd lua-libuv
 ```
 
-2. Inicialize os submódulos para obter as dependências externas:
+3. Inicialize os submódulos para obter as dependências externas:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-3. Compile as dependências e módulos:
+4. Compile as dependências e módulos:
 
 ```bash
 make
